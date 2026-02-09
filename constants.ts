@@ -248,11 +248,11 @@ export const QUIZ_DATABASE: Question[] = [
     topic: 'Excel',
     question: 'A extensão de arquivo padrão para pastas de trabalho habilitadas para macros é:',
     options: [
-      '.xlsx (formato padrão de planilhas modernas baseadas em XML).',
-      '.xlsm (formato que suporta a execução de scripts em linguagem VBA).',
-      '.csv (formato de texto simples separado por vírgulas ou ponto-e-vírgula).',
-      '.pdf (formato de documento portátil focado exclusivamente em leitura).',
-      '.exe (formato executável que roda a planilha de forma independente).'
+      '.xlsx',
+      '.xlsm',
+      '.csv',
+      '.pdf',
+      '.exe'
     ],
     correctAnswer: 1,
     explanation: 'Arquivos .xlsx não salvam macros por segurança; deve-se usar .xlsm.'
@@ -426,5 +426,573 @@ export const QUIZ_DATABASE: Question[] = [
     ],
     correctAnswer: 1,
     explanation: 'Hiperlinks são versáteis e permitem navegar tanto interna quanto externamente.'
+  },
+  
+  // --- NAVEGAÇÃO DEFENSIVA (10 Questões) ---
+  {
+    id: 'nd1',
+    topic: 'Navegação Defensiva',
+    question: 'Qual é o principal indicativo visual de que uma conexão web está utilizando criptografia de ponta a ponta via SSL/TLS?',
+    options: [
+      'A presença de um ícone de escudo verde na barra de tarefas inferior do Windows.',
+      'O prefixo "https://" acompanhado por um ícone de cadeado fechado no navegador.',
+      'A exibição de uma marca d\'água animada no fundo de todas as páginas acessadas.',
+      'O carregamento automático de um plugin de segurança antes de abrir o site.',
+      'A mudança da cor do cursor do mouse para indicar uma zona de navegação segura.'
+    ],
+    correctAnswer: 1,
+    explanation: 'O HTTPS garante que os dados trocados entre o navegador e o servidor sejam cifrados.'
+  },
+  {
+    id: 'nd2',
+    topic: 'Navegação Defensiva',
+    question: 'A prática de "Phishing" consiste fundamentalmente em qual técnica de ataque?',
+    options: [
+      'Invasão direta de servidores de arquivos usando força bruta de senhas adm.',
+      'Uso de mensagens fraudulentas para induzir o usuário a revelar dados sensíveis.',
+      'Monitoramento de tráfego de rede para capturar pacotes de dados não cifrados.',
+      'Sobrecarga de um site com acessos simultâneos para causar indisponibilidade.',
+      'Instalação de hardware físico malicioso nas portas USB de computadores públicos.'
+    ],
+    correctAnswer: 1,
+    explanation: 'Phishing é um tipo de engenharia social que "pesca" dados através de comunicações falsas.'
+  },
+  {
+    id: 'nd3',
+    topic: 'Navegação Defensiva',
+    question: 'Ao utilizar redes Wi-Fi públicas em locais como aeroportos, a prática mais segura é:',
+    options: [
+      'Acessar livremente contas bancárias, já que estas possuem segurança própria.',
+      'Evitar o acesso a dados críticos e utilizar uma VPN para cifrar o tráfego.',
+      'Acreditar que o nome da rede (ex: "Wi-Fi Grátis") garante a sua legitimidade.',
+      'Desativar o firewall do sistema para melhorar a velocidade de conexão local.',
+      'Compartilhar pastas de rede para facilitar a troca de arquivos com terceiros.'
+    ],
+    correctAnswer: 1,
+    explanation: 'Redes públicas são inseguras; a VPN cria um túnel seguro de comunicação.'
+  },
+  {
+    id: 'nd4',
+    topic: 'Navegação Defensiva',
+    question: 'A "Autenticação de Dois Fatores" (2FA) adiciona qual camada de segurança ao usuário?',
+    options: [
+      'Exige que o usuário digite a senha duas vezes seguidas para evitar erros.',
+      'Solicita uma segunda forma de verificação além da senha tradicional de acesso.',
+      'Bloqueia o acesso à internet caso o usuário erre a senha por três vezes.',
+      'Criptografa o disco rígido do computador sempre que o navegador é aberto.',
+      'Permite que dois usuários acessem a mesma conta simultaneamente de locais distintos.'
+    ],
+    correctAnswer: 1,
+    explanation: 'O 2FA usa "algo que você sabe" (senha) e "algo que você tem" (token/celular).'
+  },
+  {
+    id: 'nd5',
+    topic: 'Navegação Defensiva',
+    question: 'Qual é a função primordial dos "Cookies" de terceiros no contexto da navegação?',
+    options: [
+      'Armazenar senhas de forma segura para agilizar logins futuros em sites oficiais.',
+      'Rastrear o comportamento do usuário entre diferentes sites para fins de perfil.',
+      'Aumentar a velocidade de download de arquivos pesados via cache de disco.',
+      'Protejer o computador contra scripts maliciosos injetados por pop-ups.',
+      'Identificar o modelo físico da placa de vídeo para otimizar gráficos web.'
+    ],
+    correctAnswer: 1,
+    explanation: 'Cookies de terceiros são frequentemente usados para publicidade direcionada e rastreamento.'
+  },
+  {
+    id: 'nd6',
+    topic: 'Navegação Defensiva',
+    question: 'No contexto de segurança digital, o termo "Engenharia Social" refere-se a:',
+    options: [
+      'Desenvolvimento de algoritmos que otimizam as interações em redes sociais.',
+      'Manipulação psicológica de pessoas para obter informações confidenciais.',
+      'Manutenção técnica de servidores que hospedam perfis de usuários corporativos.',
+      'Criação de interfaces de usuário que seguem padrões de acessibilidade universal.',
+      'Estudo estatístico da demografia de usuários que acessam sites governamentais.'
+    ],
+    correctAnswer: 1,
+    explanation: 'A engenharia social foca no "elo mais fraco" da segurança: o ser humano.'
+  },
+  {
+    id: 'nd7',
+    topic: 'Navegação Defensiva',
+    question: 'O "Modo Incógnito" ou "Janela Anônima" do navegador tem como principal efeito:',
+    options: [
+      'Ocultar o endereço IP do usuário do servidor do site que está sendo visitado.',
+      'Não salvar histórico, cookies e dados de formulários localmente no dispositivo.',
+      'Criptografar toda a comunicação entre o roteador e o provedor de internet.',
+      'Impedir que o provedor de internet saiba quais sites o usuário está acessando.',
+      'Instalar automaticamente um antivírus temporário durante a sessão de uso.'
+    ],
+    correctAnswer: 1,
+    explanation: 'A janela anônima protege a privacidade local (no PC), mas não a privacidade na rede.'
+  },
+  {
+    id: 'nd8',
+    topic: 'Navegação Defensiva',
+    question: 'Um "Ataque Homógrafo" em URLs utiliza qual técnica para enganar usuários?',
+    options: [
+      'Substitui o domínio principal por uma sequência de números aleatórios de IP.',
+      'Usa caracteres visualmente similares de outros alfabetos para falsificar links.',
+      'Aumenta o tamanho da fonte da URL para dificultar a leitura rápida do endereço.',
+      'Redireciona o tráfego para servidores proxy que comprimem imagens do site.',
+      'Altera a cor da barra de endereços para imitar a identidade visual de bancos.'
+    ],
+    correctAnswer: 1,
+    explanation: 'Ex: usar um "o" cirílico que parece um "o" latino para criar sites falsos idênticos.'
+  },
+  {
+    id: 'nd9',
+    topic: 'Navegação Defensiva',
+    question: 'Qual a recomendação ideal para o gerenciamento de senhas em ambientes corporativos?',
+    options: [
+      'Utilizar a mesma senha em todos os sistemas para facilitar a memorização.',
+      'Anotar as senhas em post-its colados no monitor para acesso rápido e fácil.',
+      'Utilizar um gerenciador de senhas para criar e armazenar chaves únicas e fortes.',
+      'Usar sequências simples como "123456" ou o nome da própria empresa/setor.',
+      'Trocar a senha anualmente, mantendo o padrão da senha anterior com um dígito a mais.'
+    ],
+    correctAnswer: 2,
+    explanation: 'Gerenciadores permitem ter senhas complexas e diferentes para cada serviço.'
+  },
+  {
+    id: 'nd10',
+    topic: 'Navegação Defensiva',
+    question: 'O recurso de "Filtro de Conteúdo" em navegadores serve para:',
+    options: [
+      'Remover anúncios que utilizam excessivamente a memória RAM do computador.',
+      'Bloquear o acesso a sites conhecidos por hospedar malwares ou conteúdos impróprios.',
+      'Traduzir termos técnicos complexos para uma linguagem mais acessível ao leigo.',
+      'Ajustar o contraste das cores do site para melhorar a leitura em ambientes escuros.',
+      'Organizar os favoritos do usuário baseando-se na frequência de acesso diário.'
+    ],
+    correctAnswer: 1,
+    explanation: 'Ferramentas como Safe Browsing protegem o usuário de cair em domínios perigosos.'
+  },
+
+  // --- SEGURANÇA & MALWARE (10 Questões) ---
+  {
+    id: 'sm1',
+    topic: 'Segurança & Malware',
+    question: 'O "Ransomware" é um tipo de código malicioso que se caracteriza por:',
+    options: [
+      'Exibir propagandas excessivas e não solicitadas na tela do usuário infectado.',
+      'Criptografar arquivos do usuário e exigir um resgate para fornecer a chave.',
+      'Monitorar silenciosamente as teclas digitadas para capturar senhas bancárias.',
+      'Excluir permanentemente o sistema operacional após 24 horas de infecção ativa.',
+      'Utilizar o hardware do computador para minerar criptomoedas sem autorização.'
+    ],
+    correctAnswer: 1,
+    explanation: 'O sequestro de dados (Ransom) é a principal marca desse tipo de malware.'
+  },
+  {
+    id: 'sm2',
+    topic: 'Segurança & Malware',
+    question: 'Conceitualmente, qual a principal diferença entre um "Vírus" e um "Worm"?',
+    options: [
+      'Vírus são inofensivos; Worms são projetados para destruir componentes físicos.',
+      'Vírus precisam de um hospedeiro; Worms se propagam sozinhos pela rede.',
+      'Worms infectam apenas arquivos de imagem; Vírus infectam arquivos executáveis.',
+      'Não há diferença técnica, sendo ambos nomes comerciais para o mesmo software.',
+      'Vírus agem apenas em servidores; Worms agem apenas em dispositivos móveis.'
+    ],
+    correctAnswer: 1,
+    explanation: 'Worms exploram vulnerabilidades de rede para se espalharem sem interação humana.'
+  },
+  {
+    id: 'sm3',
+    topic: 'Segurança & Malware',
+    question: 'Um "Cavalo de Troia" (Trojan Horse) atua de qual forma no sistema?',
+    options: [
+      'Protege o computador contra outros vírus simulando ser um firewall potente.',
+      'Disfarça-se de um software legítimo para realizar ações maliciosas ocultas.',
+      'Aumenta a velocidade do processador através de overclocking não autorizado.',
+      'Organiza os arquivos do sistema para que o antivírus não consiga escaneá-los.',
+      'Desliga o computador subitamente sempre que o usuário tenta abrir o navegador.'
+    ],
+    correctAnswer: 1,
+    explanation: 'O Trojan parece algo útil (como um jogo ou utilitário), mas carrega uma carga maliciosa.'
+  },
+  {
+    id: 'sm4',
+    topic: 'Segurança & Malware',
+    question: 'O malware do tipo "Spyware" tem como objetivo primordial:',
+    options: [
+      'Destruir a partição de inicialização do disco para impedir o uso do PC.',
+      'Coletar informações sobre o usuário e enviá-las a terceiros sem consentimento.',
+      'Substituir o papel de parede por mensagens de cunho político ou ativista.',
+      'Bloquear o acesso às portas USB para impedir a cópia de dados corporativos.',
+      'Emular o comportamento de um usuário real para clicar em anúncios pagos.'
+    ],
+    correctAnswer: 1,
+    explanation: 'Spywares agem silenciosamente espionando atividades, logins e preferências.'
+  },
+  {
+    id: 'sm5',
+    topic: 'Segurança & Malware',
+    question: 'Qual a função técnica de um "Firewall" em uma estrutura de rede?',
+    options: [
+      'Realizar o backup automático de todos os arquivos modificados recentemente.',
+      'Controlar o tráfego de dados entre redes com base em regras de segurança.',
+      'Aumentar o sinal de Wi-Fi através de algoritmos de compressão de ondas.',
+      'Criptografar as pastas de documentos pessoais para evitar o acesso local.',
+      'Limpar fisicamente os componentes de hardware para evitar superaquecimento.'
+    ],
+    correctAnswer: 1,
+    explanation: 'O Firewall atua como uma barreira que decide o que entra e o que sai da rede.'
+  },
+  {
+    id: 'sm6',
+    topic: 'Segurança & Malware',
+    question: 'O que caracteriza a técnica de detecção por "Heurística" em antivírus modernos?',
+    options: [
+      'Busca por uma sequência exata de bytes que identifica um vírus conhecido.',
+      'Análise do comportamento e características do código para identificar ameaças novas.',
+      'Exclusão automática de qualquer arquivo que não possua uma assinatura digital.',
+      'Envio de todos os arquivos suspeitos para a nuvem para análise por humanos.',
+      'Comparação do nome do arquivo com uma lista negra de softwares proibidos.'
+    ],
+    correctAnswer: 1,
+    explanation: 'A heurística permite identificar malwares novos (Zero-day) que ainda não têm assinatura.'
+  },
+  {
+    id: 'sm7',
+    topic: 'Segurança & Malware',
+    question: 'Uma "Botnet" pode ser definida tecnicamente como:',
+    options: [
+      'Uma rede social exclusiva para profissionais da área de robótica e IA.',
+      'Uma rede de computadores infectados controlados remotamente para ataques.',
+      'Um sistema de armazenamento em nuvem que utiliza robôs para organizar dados.',
+      'Um conjunto de cabos de fibra óptica que ligam diferentes data centers mundiais.',
+      'Uma ferramenta de chat automático utilizada por empresas para suporte técnico.'
+    ],
+    correctAnswer: 1,
+    explanation: 'Computadores zumbis (bots) são usados em massa para ataques como o DDoS.'
+  },
+  {
+    id: 'sm8',
+    topic: 'Segurança & Malware',
+    question: 'O termo "Rootkit" refere-se a um conjunto de ferramentas maliciosas que:',
+    options: [
+      'Aumentam o brilho da tela para consumir a bateria de notebooks rapidamente.',
+      'Buscam esconder a presença de invasores e malwares no nível mais profundo do SO.',
+      'Traduzem automaticamente mensagens de erro do sistema para outros idiomas.',
+      'Instalam versões de teste de softwares pagos para induzir a compra futura.',
+      'Recuperam arquivos que foram excluídos acidentalmente da lixeira do Windows.'
+    ],
+    correctAnswer: 1,
+    explanation: 'Rootkits operam no núcleo (kernel) do sistema, sendo extremamente difíceis de detectar.'
+  },
+  {
+    id: 'sm9',
+    topic: 'Segurança & Malware',
+    question: 'Um "Keylogger" é uma ferramenta de espionagem que atua:',
+    options: [
+      'Tirando fotos da webcam do usuário a cada minuto de forma oculta.',
+      'Registrando todas as sequências de teclas pressionadas no teclado físico.',
+      'Gravando o áudio ambiente através do microfone embutido no dispositivo.',
+      'Alterando as cores das teclas virtuais para confundir a digitação de senhas.',
+      'Enviando e-mails falsos em nome do usuário para todos os seus contatos.'
+    ],
+    correctAnswer: 1,
+    explanation: 'É muito usado para roubar senhas conforme elas são digitadas.'
+  },
+  {
+    id: 'sm10',
+    topic: 'Segurança & Malware',
+    question: 'Qual a recomendação primordial após a detecção de uma infecção por Malware?',
+    options: [
+      'Desligar o monitor imediatamente para impedir que o vírus veja o usuário.',
+      'Isolar o dispositivo da rede e executar uma varredura completa com antivírus.',
+      'Reiniciar o computador repetidamente até que o vírus seja removido pelo sistema.',
+      'Apagar manualmente a pasta "System32" para eliminar o núcleo da infecção.',
+      'Instalar cinco antivírus diferentes simultaneamente para garantir a limpeza.'
+    ],
+    correctAnswer: 1,
+    explanation: 'Isolar da rede impede que o malware se propague ou receba comandos remotos.'
+  },
+
+  // --- TEORIA MICROSOFT 365 (10 Questões - Baseadas no Guia Visual) ---
+  {
+    id: 'm365_1',
+    topic: 'Teoria Microsoft 365',
+    question: 'Conceitualmente, o que define a "Liberdade Digital" no ecossistema Multiplataforma do Microsoft 365?',
+    options: [
+      'A gratuidade vitalícia de todos os softwares para usuários domésticos.',
+      'A capacidade de usar a ferramenta em qualquer hardware (Desktop, Web ou Mobile).',
+      'O bloqueio de hardware específico para impedir a pirataria de arquivos.',
+      'A obrigatoriedade de ter o Windows instalado em todos os dispositivos da rede.',
+      'A remoção de senhas de acesso para agilizar a produtividade em trânsito.'
+    ],
+    correctAnswer: 1,
+    explanation: 'Multiplataforma significa que a experiência de uso não está presa a um único hardware.'
+  },
+  {
+    id: 'm365_2',
+    topic: 'Teoria Microsoft 365',
+    question: 'O recurso "Pick up where you left off" (Continuar de onde parou) foca tecnicamente em:',
+    options: [
+      'Recuperar arquivos que foram excluídos acidentalmente da lixeira local.',
+      'Garantir a continuidade e o estado sincronizado do documento entre dispositivos.',
+      'Impedir que outros usuários editem o arquivo enquanto o autor principal está offline.',
+      'Traduzir o texto automaticamente para o idioma do novo dispositivo detectado.',
+      'Aumentar a resolução das imagens sempre que o arquivo é aberto em um tablet.'
+    ],
+    correctAnswer: 1,
+    explanation: 'O estado do documento é preservado e sincronizado instantaneamente na nuvem.'
+  },
+  {
+    id: 'm365_3',
+    topic: 'Teoria Microsoft 365',
+    question: 'Quais serviços são descritos como os "motores invisíveis" (Espinha Dorsal) da nuvem do 365?',
+    options: [
+      'O Bloco de Notas e a Calculadora do Windows.',
+      'O OneDrive e o SharePoint.',
+      'O Windows Explorer e o Gerenciador de Tarefas do sistema.',
+      'O Prompt de Comando e o Editor de Registro do Windows.',
+      'A Lixeira e a Central de Ações do sistema operacional.'
+    ],
+    correctAnswer: 1,
+    explanation: 'OneDrive e SharePoint garantem que a "verdade" do arquivo esteja na nuvem.'
+  },
+  {
+    id: 'm365_4',
+    topic: 'Teoria Microsoft 365',
+    question: 'No design centrado no usuário, o que é a "Descoberta Progressiva"?',
+    options: [
+      'Um tutorial obrigatório que o usuário deve completar ao abrir o app.',
+      'Recursos complexos que só aparecem quando são pertinentes à tarefa atual.',
+      'A atualização automática do software conforme novas funções são criadas.',
+      'O aumento gradual da velocidade de processamento conforme o uso do PC.',
+      'A identificação automática de erros de digitação conforme o texto progride.'
+    ],
+    correctAnswer: 1,
+    explanation: 'Evita sobrecarregar o usuário, mostrando apenas o que é necessário no momento.'
+  },
+  {
+    id: 'm365_5',
+    topic: 'Teoria Microsoft 365',
+    question: 'O Fluent Design System unifica a experiência baseando-se em quais princípios?',
+    options: [
+      'Cor, Brilho, Saturação, Contraste e Matiz.',
+      'Luz, Profundidade, Movimento, Material e Escala.',
+      'Fonte, Tamanho, Negrito, Itálico e Sublinhado.',
+      'Velocidade, Memória, Disco, Rede e Processamento.',
+      'Entrada, Saída, Processamento, Armazenamento e Controle.'
+    ],
+    correctAnswer: 1,
+    explanation: 'Luz cria foco, Profundidade separa camadas e Material dá sensação física.'
+  },
+  {
+    id: 'm365_6',
+    topic: 'Teoria Microsoft 365',
+    question: 'Por que a "Ribbon" (Faixa de Opções) reduz a curva de aprendizado?',
+    options: [
+      'Porque ela esconde todos os comandos para deixar a tela limpa.',
+      'Pela padronização visual consistente entre Word, Excel e PowerPoint.',
+      'Por ser um menu circular que gira conforme o movimento do mouse.',
+      'Por traduzir automaticamente os ícones para emojis simplificados.',
+      'Porque ela exige o uso de comandos de voz para ser operada.'
+    ],
+    correctAnswer: 1,
+    explanation: 'Se você sabe usar o Word, já sabe navegar nos outros apps pela consistência.'
+  },
+  {
+    id: 'm365_7',
+    topic: 'Teoria Microsoft 365',
+    question: 'O conceito de "Reflow" (Refluxo) na interface adaptativa serve para:',
+    options: [
+      'Trocar as cores do documento para economizar bateria no celular.',
+      'Ajustar o texto à largura da tela para leitura confortável sem zoom manual.',
+      'Enviar o documento automaticamente para a impressora mais próxima.',
+      'Reduzir a qualidade das fotos para acelerar o carregamento em redes 3G.',
+      'Ordenar os parágrafos por ordem alfabética automaticamente.'
+    ],
+    correctAnswer: 1,
+    explanation: 'O conteúdo sofre "reflow" para se adaptar ao contexto de uso (ex: Mobile).'
+  },
+  {
+    id: 'm365_8',
+    topic: 'Teoria Microsoft 365',
+    question: 'Como a IA (Copilot/Designer) eleva a intuitividade do sistema?',
+    options: [
+      'Bloqueando o acesso do usuário caso ele cometa erros de digitação.',
+      'Adivinhando a intenção do usuário através de comandos em linguagem natural.',
+      'Lendo em voz alta todos os menus para quem não quer olhar para a tela.',
+      'Desligando o computador após 8 horas de trabalho para evitar fadiga.',
+      'Substituindo completamente a necessidade de usar o teclado ou o mouse.'
+    ],
+    correctAnswer: 1,
+    explanation: 'O usuário pode simplesmente digitar: "Transforme esses dados em tabela".'
+  },
+  {
+    id: 'm365_9',
+    topic: 'Teoria Microsoft 365',
+    question: 'Na colaboração sem atrito, o que são os "Flagged Cursors" (Cursores Coloridos)?',
+    options: [
+      'Sinalizações de erros ortográficos graves detectados pelo Editor.',
+      'Indicadores visuais de colegas editando o mesmo documento em tempo real.',
+      'Marcadores de páginas que o usuário salvou como favoritos na nuvem.',
+      'Ícones que indicam que o arquivo está protegido por uma senha forte.',
+      'Ponteiros do mouse que mudam de cor conforme a temperatura do processador.'
+    ],
+    correctAnswer: 1,
+    explanation: 'Ver quem está editando elimina a confusão de versões e o conflito de edições.'
+  },
+  {
+    id: 'm365_10',
+    topic: 'Teoria Microsoft 365',
+    question: 'Qual a relação entre Acessibilidade e Intuitividade no Microsoft 365?',
+    options: [
+      'Nenhuma, são conceitos distintos que não se cruzam no software.',
+      'Uma interface só é intuitiva se for inclusiva para todos (contraste, leitura, foco).',
+      'Acessibilidade serve apenas para usuários com hardware muito antigo.',
+      'Intuitividade é focada apenas em jovens, e acessibilidade em idosos.',
+      'A acessibilidade aumenta a complexidade da interface, reduzindo a intuitividade.'
+    ],
+    correctAnswer: 1,
+    explanation: 'Ferramentas como Alto Contraste e Foco Imersivo tornam a interface verdadeiramente intuitiva.'
+  },
+
+  // --- MICROSOFT ACCESS (10 Questões - Baseadas no Conteúdo) ---
+  {
+    id: 'acc_1',
+    topic: 'Microsoft Access',
+    question: 'Tecnicamente, o Microsoft Access é classificado como um:',
+    options: [
+      'Processador de Planilhas de Cálculo Flexível e Rápido.',
+      'Sistema de Gerenciamento de Banco de Dados Relacional (SGBD).',
+      'Editor de Imagens Vetoriais para Design Gráfico Profissional.',
+      'Navegador de Internet com foco em Segurança e Privacidade.',
+      'Servidor de E-mails com suporte a criptografia assimétrica.'
+    ],
+    correctAnswer: 1,
+    explanation: 'O Access serve para armazenar grandes volumes de dados que se relacionam entre si.'
+  },
+  {
+    id: 'acc_2',
+    topic: 'Microsoft Access',
+    question: 'Qual a principal vantagem do Access sobre o Excel em termos de integridade?',
+    options: [
+      'O Access é mais colorido e possui ícones mais modernos que o Excel.',
+      'O Access garante a integridade dos dados e previne erros de duplicação.',
+      'O Excel é capaz de armazenar mais linhas que um banco de dados Access.',
+      'O Access funciona sem necessidade de energia elétrica ou bateria.',
+      'Não há vantagem, o Excel é tecnicamente superior em todos os cenários.'
+    ],
+    correctAnswer: 1,
+    explanation: 'Bancos de dados relacionais usam chaves e regras para evitar dados inválidos.'
+  },
+  {
+    id: 'acc_3',
+    topic: 'Microsoft Access',
+    question: 'A ferramenta "Tabelas" no Access tem a função primordial de:',
+    options: [
+      'Gerar gráficos de pizza baseados em dados estatísticos globais.',
+      'Armazenamento estruturado e relacional dos dados brutos.',
+      'Filtrar mensagens de spam em contas de e-mail corporativas.',
+      'Criar interfaces de usuário com botões e menus coloridos.',
+      'Traduzir o banco de dados para o formato de áudio MP3.'
+    ],
+    correctAnswer: 1,
+    explanation: 'Tabelas são onde os dados realmente residem em um formato estruturado.'
+  },
+  {
+    id: 'acc_4',
+    topic: 'Microsoft Access',
+    question: 'O recurso de "Consultas" (Queries) permite ao usuário realizar:',
+    options: [
+      'A impressão física de todos os registros em papel de alta gramatura.',
+      'Filtragem e manipulação complexa de dados através de linguagem SQL.',
+      'O desenho de formas geométricas para ilustrar o banco de dados.',
+      'A gravação de vídeos explicativos sobre como preencher as tabelas.',
+      'A alteração da senha de login do Windows através do Access.'
+    ],
+    correctAnswer: 1,
+    explanation: 'Consultas permitem extrair exatamente a informação necessária do mar de dados.'
+  },
+  {
+    id: 'acc_5',
+    topic: 'Microsoft Access',
+    question: 'Qual a utilidade técnica dos "Formulários" no ambiente do Access?',
+    options: [
+      'Criptografar o banco de dados para envio via redes sociais.',
+      'Oferecer interfaces amigáveis para a entrada e visualização de dados.',
+      'Calcular fórmulas matemáticas complexas usando apenas o mouse.',
+      'Substituir a necessidade de ter um sistema operacional instalado.',
+      'Gerar modelos de contratos legais prontos para assinatura digital.'
+    ],
+    correctAnswer: 1,
+    explanation: 'Formulários facilitam a vida de quem insere os dados, evitando erros.'
+  },
+  {
+    id: 'acc_6',
+    topic: 'Microsoft Access',
+    question: 'Os "Relatórios" do Access são projetados especificamente para:',
+    options: [
+      'Enviar mensagens de erro automáticas para a equipe de suporte.',
+      'Gerar documentos prontos para impressão baseados nos dados coletados.',
+      'Compactar o banco de dados para caber em um disquete antigo.',
+      'Esconder dados sensíveis de usuários que não possuem permissão.',
+      'Verificar se o computador possui atualizações de hardware pendentes.'
+    ],
+    correctAnswer: 1,
+    explanation: 'Relatórios transformam dados crus em informações organizadas para leitura.'
+  },
+  {
+    id: 'acc_7',
+    topic: 'Microsoft Access',
+    question: 'Em qual cenário o uso do Access é mais indicado que o do Excel?',
+    options: [
+      'Para fazer uma lista de compras rápida para o final de semana.',
+      'Gestão de Estoque Complexo relacionando produtos, fornecedores e vendas.',
+      'Para criar uma apresentação visual de slides para uma reunião.',
+      'Para escrever uma carta formal de demissão ou apresentação.',
+      'Para realizar projeções financeiras simples do tipo "e se?".'
+    ],
+    correctAnswer: 1,
+    explanation: 'O Access brilha quando há necessidade de relacionamentos complexos entre dados.'
+  },
+  {
+    id: 'acc_8',
+    topic: 'Microsoft Access',
+    question: 'O suporte a "Multi-usuários" no Access em rede local permite que:',
+    options: [
+      'Apenas uma pessoa edite o arquivo por vez para evitar conflitos.',
+      'Várias pessoas insiram dados simultaneamente no mesmo banco.',
+      'O banco de dados seja deletado automaticamente se dois usuários logarem.',
+      'O sistema divida a tela em quatro partes iguais para cada usuário.',
+      'A velocidade da internet seja triplicada durante a inserção de dados.'
+    ],
+    correctAnswer: 1,
+    explanation: 'Diferente do Excel comum, bancos de dados lidam bem com acessos concorrentes.'
+  },
+  {
+    id: 'acc_9',
+    topic: 'Microsoft Access',
+    question: 'Quando NÃO se deve utilizar o Microsoft Access segundo o guia?',
+    options: [
+      'Para gerenciar o histórico de pedidos de milhares de clientes.',
+      'Para Listas Simples, cálculos flexíveis ou projeções financeiras rápidas.',
+      'Sempre que houver necessidade de integridade de dados absoluta.',
+      'Em empresas que possuem mais de cinco funcionários no setor de TI.',
+      'Sempre que o usuário quiser usar a cor vermelha em sua interface.'
+    ],
+    correctAnswer: 1,
+    explanation: 'Para coisas simples e rápidas, o Excel é muito mais eficiente.'
+  },
+  {
+    id: 'acc_10',
+    topic: 'Microsoft Access',
+    question: 'Para aplicações web globais massivas, a recomendação técnica é preferir:',
+    options: [
+      'Continuar usando o Access, pois ele suporta bilhões de usuários simultâneos.',
+      'SQL Server ou outros bancos de dados robustos de classe empresarial.',
+      'Salvar o banco de dados em formato de texto e subir no site.',
+      'Utilizar o PowerPoint como servidor de banco de dados para a web.',
+      'Migrar todos os dados para o Word e habilitar o modo de leitura web.'
+    ],
+    correctAnswer: 1,
+    explanation: 'O Access é excelente para redes locais e complexidade média, não para escala global massiva.'
   }
 ];
