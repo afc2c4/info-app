@@ -142,8 +142,10 @@ const App: React.FC = () => {
                 topic === 'Word' ? 'fas fa-file-word' : 
                 topic === 'Excel' ? 'fas fa-file-excel' : 
                 topic === 'PowerPoint' ? 'fas fa-file-powerpoint' : 
+                topic === 'Navegação Defensiva' ? 'fas fa-shield-alt' :
+                topic === 'Navegação Defensiva' ? 'fas fa-shield-alt' :
                 topic === 'Navegação Defensiva' ? 'fas fa-shield-alt' : 
-                'fas fa-user-secret'
+                'fas fa-book'
               }></i>
             </div>
             <h3 className="text-xl font-bold mb-2">{topic}</h3>

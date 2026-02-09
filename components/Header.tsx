@@ -21,7 +21,7 @@ const Header: React.FC<HeaderProps> = ({ onHome, isDarkMode, onToggleDarkMode, c
             <i className="fas fa-graduation-cap"></i>
           </div>
           <h1 className="text-xl font-bold bg-gradient-to-r from-blue-500 to-indigo-500 bg-clip-text text-transparent hidden sm:block">
-            Mestre Digital
+            Questionário - Informática Aplicada
           </h1>
         </div>
         
